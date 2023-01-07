@@ -41,14 +41,16 @@ random_pass = ""
 concat_as_list = list(concat)
 print(f"concat_as_list {concat_as_list}, concat_as_list length = {len(concat_as_list)}")
 
+i = 1
 for j in concat:
-    print(f"Looping for {j} time")
+    print(f"Looping for {i} time")
     choice = random.choice(concat_as_list)
     print(f"Random choice is {choice}")
     random_pass += choice
     print(f'Current random_pass = {random_pass}')
     concat_as_list.remove(choice)
     print(f'Current concat_as_list content:{concat_as_list}')
+    i += 1
 
 print(f"Final random pass is: {random_pass}")
 
